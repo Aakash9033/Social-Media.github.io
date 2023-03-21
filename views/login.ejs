@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F0F2F5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    font-size: 25px;
+}
+
+.container h1{
+    color: #2C83F2;
+}
+
+
+.box {
+    width: 75%;
+    margin: 10px;
+    margin-top: 18px;
+    margin-left: 21px;
+    padding: 13px 18px;
+}
+
+.link{
+    cursor: pointer;
+    width: 81%;
+    text-align: center;
+    background-color: #2C83f2;
+    margin-top: 10px;
+    margin-left: 27px;
+    padding: 11px;
+    border-style:none;
+    border-radius: 7px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.link1 {
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #2C83f2;
+    font-size: 15px;
+}
+
+.link2{
+    width: 50%;
+    margin: 23%;
+    margin-left:70px;
+    margin-top: 40px;
+    background-color: #36A420;
+    padding: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+}
+#form
+{
+    width: 320px;
+    height: 350px;
+    position: absolute;
+    top: 20%;
+    left: 57%;
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Social Media</h1>
+        <p>Social Media helps you connect and share<br> with the people in your life.</p>
+    </div>
+
+    <form id="form" action="/userlogin" method="POST">
+        
+            <input type="email" name="Email" class="box" placeholder="Email address or phone number"><br>
+            <input type="password" name="Password" class="box" placeholder="Password">
+
+    
+           <button class="link">Log In</button><br><br>
+    
+
+        
+            <a href="#"  class="link1">Forgotten Password?</a><br><br>
+
+            <a href="#" id="register" class="link2">Create New Account</a>
+
+    </form>
+
+    <script>
+        var register=document.getElementById("register")
+
+        register.addEventListener("click",function(){
+            window.location.href="register.ejs";
+        })
+
+    </script>
+   
+</body>
+</html>
